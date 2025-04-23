@@ -1,7 +1,11 @@
-export const Main = () => {
+interface Props {
+  data: Record<string, string>;
+}
+
+export const Main = ({ data }: Props) => {
   return (
     <div className="imgContainer">
-      <img src="mars.png" alt="Mars" className="bgImage" />
+      <img src={data?.hdurl} alt={data?.title} className="bgImage" />
     </div>
   );
 };
